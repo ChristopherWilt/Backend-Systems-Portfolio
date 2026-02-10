@@ -21,3 +21,18 @@ This repository contains backend engineering projects focusing on **Data Normali
 * **Data Integrity:** Enforced referential integrity via Foreign Key constraints and ACID transactions.
 
 **Key File:** `vehicle_normalization_logic.sql`
+
+---
+
+## 🛠️ Project 3: Python Automation & Data Ingestion
+To bridge the gap between raw application logs and the SQL backend, I developed custom Python utility scripts.
+
+### 1. Log Ingestion Tool (`LogParser.py`)
+A Regex-based parser designed to read raw server access logs (Apache/Nginx format) and structure them for database insertion.
+* **Feature:** Extracts IP, Timestamp, Status Code, and User Agent.
+* **Security:** Automatically flags `401 Unauthorized` attempts during the parsing phase before they reach the database.
+
+### 2. Network Data Stream Utility (`NetworkUtils.py`)
+A utility script demonstrating external data fetching and parsing.
+* **Function:** Connects to remote data streams (via HTTP), parses HTML structures using `html.parser`, and formats the output for processing.
+* **Core Concept:** Demonstrates handling of non-standard data formats and grid-coordinate mapping from unstructured web sources.
